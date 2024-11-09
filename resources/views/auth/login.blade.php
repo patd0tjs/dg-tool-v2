@@ -16,7 +16,7 @@
         <div class="row mb-3 text-start input-container">
             <div class="col-12">
                 <label class="fs-5">Password</label>
-                <input type="email" class="form-control border-primary" name="password" required>
+                <input type="password" class="form-control border-primary" name="password" required>
 
                 {{-- forgot password link --}}
                 <p class="text-end mt-1">
