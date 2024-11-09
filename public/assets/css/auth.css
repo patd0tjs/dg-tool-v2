@@ -1,0 +1,38 @@
+body {
+    background-color: #f3f4ff;
+    font-family: "Montserrat", sans-serif;
+}
+
+.template {
+    height: 100vh; /* For 100% screen height */
+    min-width: 100vw;
+}
+
+/* left section label */
+#figure_label {
+    color: #006bb8;
+}
+
+#right {
+    background-color: #bce3ff;
+    text-align: center;
+    border-radius: 75px 0% 0% 75px;
+}
+
+#auth_title {
+    color: #4b4b4b;
+}
+
+@media (max-width: 991px) {
+    #right {
+        border-radius: 0px 0% 0% 0px;
+    }
+
+    .input-container {
+        text-align: center !important;
+    }
+
+    input {
+        text-align: center !important;
+    }
+}

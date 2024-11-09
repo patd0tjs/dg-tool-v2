@@ -1,0 +1,20 @@
+body {
+    background-color: #f3f4ff;
+    font-family: "Montserrat", sans-serif;
+}
+
+#nav_main {
+    background-color: #006bb8;
+}
+
+#nav_stripe img {
+    height: 2.5rem;
+}
+
+#nav_stripe {
+    background-color: #f1db25;
+}
+
+.navbar-text {
+    color: #006bb8;
+}
