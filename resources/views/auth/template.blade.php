@@ -20,7 +20,7 @@
     <body>
         <div class="row p-0 m-0 template">
             {{-- left section --}}
-            <div class="col p-5 position-relative" id="left">
+            <div class="col-lg p-5 d-none d-lg-block position-relative" id="left">
                 <div class="position-absolute top-50 start-50 translate-middle p-0 m-0">
                     <img src="{{ URL::asset('assets/img/login-figure.png')}}" class="img-fluid">
                     <h1 id="figure_label" class="fs-1 fw-bold">
@@ -32,7 +32,7 @@
             </div>
 
             {{-- right section --}}
-            <div class="col pt-5" id="right">
+            <div class="col-lg pt-5" id="right">
                 <div class="p-5">
                     <img src="{{ URL::asset('assets/img/logo.png')}}" class="img-fluid mt-5 mb-3">
                     <br>

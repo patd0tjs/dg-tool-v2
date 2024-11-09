@@ -34,10 +34,10 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                   <li class="nav-item text-center">
-                    <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+                    <a class="nav-link {{ ($page == "Dashboard") ? 'active' : '' }}" aria-current="page" href="{{ route('dashboard') }}">Dashboard</a>
                   </li>
                   <li class="nav-item text-center">
-                    <a class="nav-link" href="#">Student</a>
+                    <a class="nav-link {{ ($page == "Student") ? 'active' : '' }}" href="{{ route('student') }}">Student</a>
                   </li>
                   <li class="nav-item text-center">
                     <a class="nav-link" href="#">Transaction</a>
