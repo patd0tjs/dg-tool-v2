@@ -13,7 +13,7 @@ class StudentController extends Controller
      */
     public function index()
     {
-        return view('student', ['page' => 'Student']);
+        return view('student.index', ['page' => 'Student']);
     }
 
     /**
@@ -21,9 +21,21 @@ class StudentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function createProfile(Request $request)
     {
-        //
+        $data = [
+            'page'   => 'Student',
+            'l_name' => session('l_name'),
+            'f_name' => session('f_name'),
+            'm_name' => session('m_name'),
+            'suffix' => session('suffix'),
+            'bday' => '',
+            'religion' => '',
+            'gender' => '',
+            'lrn' => '',
+            'level' => ''
+        ];
+        return view('student.add.profile', $data);
     }
 
     /**
@@ -35,6 +47,20 @@ class StudentController extends Controller
     public function store(Request $request)
     {
         //
+    }
+
+    public function storeProfile(Request $request)
+    {
+        $data = [
+            'l_name' => $request->input('l_name'),
+            'f_name' => $request->input('f_name'),
+            'm_name' => $request->input('m_name'),
+            'suffix' => $request->input('suffix'),
+        ];
+       
+        session($data);
+
+        print_r($request->session()->all());
     }
 
     /**
