@@ -21,6 +21,9 @@ Route::get('/', function () {
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware(['auth']);
 Route::get('/student', [StudentController::class, 'index'])->name('student')->middleware(['auth']);
+
+// add student
 Route::get('/student/add/profile', [StudentController::class, 'createProfile'])->name('student/add/profile')->middleware(['auth']);
+Route::get('/student/add/confirm', [StudentController::class, 'confirm'])->name('student/add/confirm')->middleware(['auth']);
 Route::post('/student/add/profile', [StudentController::class, 'storeProfile'])->name('student/add/profile')->middleware(['auth']);
 require __DIR__.'/auth.php';

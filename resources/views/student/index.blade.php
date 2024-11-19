@@ -3,7 +3,7 @@
 
 
 @section('content')
-    <h1 id="page_name">Student</h1>
+    <h2 id="page_name" class="fw-bold">Student</h2>
     <table id="test"></table>
 
     <script>

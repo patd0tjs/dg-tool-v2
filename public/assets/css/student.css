@@ -3,3 +3,13 @@
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
+.summary-detail {
+    border-bottom: 1px solid #000;
+}
+
+@media (max-width: 991px) {
+    input {
+        text-align: center !important;
+    }
+}
