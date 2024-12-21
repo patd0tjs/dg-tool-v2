@@ -64,19 +64,26 @@ function confirmProfileDetails() {
     const SUFFIX = $("input[name=suffix]").val();
     const BDAY = $("input[name=bday]").val();
     const AGE = $("#student_age").val();
-    const RELIGION = $("input[name=religion]").val();
-    const GENDER = $("#student_gender").val();
-    const LRN = $("input[name=lrn]").val();
-    const ADDRESS = $("input[name=address]").val();
-    const LANDLINE = $("input[name=landline]").val();
+    let gender = $("#student_gender").val();
+
+    let religion = $("input[name=religion]").val();
+    let lrn = $("input[name=lrn]").val();
+    let address = $("input[name=address]").val();
+    let landline = $("input[name=landline]").val();
+
+    religion = religion != "" ? religion : "N/A";
+    lrn = lrn != "" ? lrn : "N/A";
+    address = address != "" ? address : "N/A";
+    landline = landline != "" ? landline : "N/A";
 
     const FULL_NAME = [F_NAME, M_NAME, L_NAME, SUFFIX];
 
     $("#confirm_name").text(FULL_NAME.join(" "));
-    $("#confirm_address").text(ADDRESS);
-    $("#confirm_lrn").text(LRN);
+    $("#confirm_address").text(address);
+    $("#confirm_lrn").text(lrn);
     $("#confirm_bday").text(BDAY);
     $("#confirm_age").text(AGE);
-    $("#confirm_religion").text(RELIGION);
-    $("#confirm_landline").text(LANDLINE);
+    $("#confirm_gender").text(gender.charAt(0).toUpperCase() + gender.slice(1));
+    $("#confirm_religion").text(religion);
+    $("#confirm_landline").text(landline);
 }
