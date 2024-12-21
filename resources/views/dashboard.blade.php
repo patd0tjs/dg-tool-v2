@@ -1,5 +1,5 @@
 @extends('template')
 
 @section('content')
-    <h1 id="page_name">Dashboard</h1>
+    <h2 id="page_name" class="fw-bold">Dashboard</h2>
 @endsection
