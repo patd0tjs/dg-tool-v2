@@ -10,7 +10,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
         {{-- custom css --}}
-        <link rel="stylesheet" href="{{ URL::asset('assets/css/auth.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('css/auth.css') }}">
         <title>DGCS Finance System</title>
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +22,7 @@
             {{-- left section --}}
             <div class="col-lg p-5 d-none d-lg-block position-relative" id="left">
                 <div class="position-absolute top-50 start-50 translate-middle p-0 m-0">
-                    <img src="{{ URL::asset('assets/img/login-figure.png')}}" class="img-fluid">
+                    <img src="{{ URL::asset('img/login-figure.png')}}" class="img-fluid">
                     <h1 id="figure_label" class="fs-1 fw-bold">
                         Divine Grace Center of Studies 
                         <br>
@@ -34,7 +34,7 @@
             {{-- right section --}}
             <div class="col-lg pt-5" id="right">
                 <div class="p-5">
-                    <img src="{{ URL::asset('assets/img/logo.png')}}" class="img-fluid mt-5 mb-3">
+                    <img src="{{ URL::asset('img/logo.png')}}" class="img-fluid mt-5 mb-3">
                     <br>
                     <h2 id="auth_title" class="mb-4"><strong>{{ $title }}</strong></h2>
                     @yield('content')

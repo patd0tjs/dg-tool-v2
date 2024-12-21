@@ -26,6 +26,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Rare Pat',
             'email' => 'pgbalanza@gmail.com',
             'password' => Hash::make('password'),
+            'is_super' => 1
         ]);
 
         foreach ($this->gradeLevels as $level) {

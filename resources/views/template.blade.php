@@ -5,6 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+
         {{-- bootstrap 5.3.3 --}}
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -13,7 +16,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
         {{-- custom css --}}
-        <link rel="stylesheet" href="{{ URL::asset('assets/css/template.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('css/template.css') }}">
         <title>DGCS Finance System</title>
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +34,7 @@
         <nav class="navbar d-none d-sm-block" id="nav_stripe">
             <div class="container-fluid d-flex justify-content-center">
               <span class="navbar-text fw-bold p-0">
-                    <img src="{{ URL::asset('assets/img/logo.png')}}">
+                    <img src="{{ URL::asset('img/logo.png')}}">
                 Divine Grace Center of Studies
               </span>
             </div>

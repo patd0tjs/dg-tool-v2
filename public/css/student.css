@@ -4,6 +4,10 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+#confirm_form {
+    display: none;
+}
+
 .summary-detail {
     border-bottom: 1px solid #000;
 }

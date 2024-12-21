@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 use App\Models\GradeLevels;
+use App\Models\StudentProfile;
 
 use Illuminate\Http\Request;
 
 class StudentController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -22,47 +24,15 @@ class StudentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function createProfile(Request $request)
+    public function create()
     {
         $data = [
             'page'      => 'Student',
             'sub_title' => 'Student Profile',
-            'l_name'    => session('l_name'),
-            'f_name'    => session('f_name'),
-            'm_name'    => session('m_name'),
-            'suffix'    => session('suffix'),
-            'bday'      => session('bday'),
-            'religion'  => session('religion'),
-            'gender'    => session('gender'),
-            'lrn'       => session('lrn'),
-            'level'     => session('level'),
-            'levels'    => GradeLevels::get(),
-            'address'   => session('address'),
-            'landline'  => session('landline')
+            'levels'    => GradeLevels::get()
         ];
 
-        return view('student.add.profile', $data);
-    }
-
-    public function confirm()
-    {
-        $data = [
-            'page'      => 'Student',
-            'sub_title' => 'Confirmation',
-            'l_name'    => session('l_name'),
-            'f_name'    => session('f_name'),
-            'm_name'    => session('m_name'),
-            'suffix'    => session('suffix'),
-            'bday'      => session('bday'),
-            'religion'  => session('religion'),
-            'gender'    => session('gender'),
-            'lrn'       => session('lrn'),
-            'level'     => GradeLevels::select('name')->where('id', session('level'))->first(),
-            'address'   => session('address'),
-            'landline'  => session('landline')
-        ];
-
-        return view('student.add.confirm', $data);
+        return view('student.add.index', $data);
     }
 
     /**
@@ -73,28 +43,30 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        $request->validate([
+            'l_name'   => 'required',
+            'f_name'   => 'required',
+            'bday'     => 'required',
+            'gender'   => 'required',
+            'level_id' => 'required'
+        ]);
 
-    public function storeProfile(Request $request)
-    {
-        $data = [
+        $student = [
             'l_name'   => $request->input('l_name'),
             'f_name'   => $request->input('f_name'),
             'm_name'   => $request->input('m_name'),
             'suffix'   => $request->input('suffix'),
             'bday'     => $request->input('bday'),
             'religion' => $request->input('religion'),
-            'gender'   => ucfirst($request->input('gender')),
+            'gender'   => $request->input('gender'),
             'lrn'      => $request->input('lrn'),
-            'level'    => $request->input('level'),
+            'level_id' => $request->input('level_id'),
             'address'  => $request->input('address'),
             'landline' => $request->input('landline')
         ];
-       
-        session($data);
 
-        return redirect('student/add/confirm');
+        StudentProfile::create($student);
+        return redirect('student');
     }
 
     /**
