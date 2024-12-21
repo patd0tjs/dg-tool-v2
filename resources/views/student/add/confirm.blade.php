@@ -42,7 +42,7 @@
                 <button type="button" class="btn btn-outline-primary fw-bold w-100" onclick="changeForms('confirm','profile')">Back</button>
             </div>
             <div class="col-xl">
-                <button type="button" class="btn btn-outline-primary fw-bold w-100" onclick="changeForms('profile','confirm')">Add Relative Information</button>
+                <button type="button" class="btn btn-outline-primary fw-bold w-100" onclick="changeForms('profile','confirm')" disabled>Add Relative Information</button>
             </div>
             <div class="col-xl-4">
                 <button type="submit" class="btn btn-primary fw-bold w-100">Confirm Student</button>
