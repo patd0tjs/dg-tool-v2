@@ -76,7 +76,7 @@
         let id = $("#level_id").val();
         $.ajax({
             type: "GET",
-            url: "{{ url('api/grade-levels/') }}",
+            url: "{{ url('api/grade-level/get-name/') }}",
             data : {'id' : id},
             success: function (response) {
                 $("#confirm_level").text(response[0].name);

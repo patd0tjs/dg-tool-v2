@@ -17,6 +17,41 @@
     </table>
 
     <script>
-        new DataTable('#student_tb');
+        $('#student_tb').DataTable({
+            ajax: "{{ url('api/student/get-all/') }}",
+            columns: [
+                { data: null, 
+                  render: function (data){
+                    return (data.lrn != null) ? data.lrn : 'N/A';
+                  }  
+                },
+                { data: 'name' },
+                { data: 'level' },
+                { data: null, 
+                  render: function (data){
+                    return (data.status == 1) ? 'Enrolled' : 'Not Enrolled';
+                  }  
+                },
+                { data: null, 
+                  render: function (data){
+                    let button = createViewLink(data.id);
+                    return button.prop('outerHTML');
+                  }  
+                },
+            ]
+        });
+
+        function createViewLink(id){
+            let link = "{{ url('student/profile?id=') }}" + id;
+
+            let view = $('<a>')
+                        .addClass('btn btn-primary')
+                        .text('View')  
+                        .attr('href', link)
+                        .attr('role', 'button')      
+                        .css('text-decoration', 'none'); 
+                        
+            return view;
+        }
     </script>
 @endsection

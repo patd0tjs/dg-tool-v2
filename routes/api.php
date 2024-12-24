@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\GradeLevelController;
+use App\Http\Controllers\ApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +19,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/grade-levels', [GradeLevelController::class, 'show']);
+Route::get('/grade-level/get-name', [ApiController::class, 'getGradeLevelName']);
+Route::get('/student/get-all', [ApiController::class, 'getAllStudents']);
