@@ -74,4 +74,5 @@
             @yield('content')
           </div>
     </body>
+    @include('components/loader')
 </html>
