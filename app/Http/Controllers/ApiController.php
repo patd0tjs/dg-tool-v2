@@ -8,9 +8,9 @@ use Illuminate\Http\Request;
 
 class ApiController extends Controller
 {
-    public function getGradeLevelName(Request $request)
+    public function getGradeLevelName($id)
     {
-        $level = GradeLevels::select('name')->where('id', $request->id)->get();
+        $level = GradeLevels::select('name')->where('id', $id)->get();
         
         if (!empty($level))
         {

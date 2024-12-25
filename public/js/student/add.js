@@ -87,3 +87,14 @@ function confirmProfileDetails() {
     $("#confirm_religion").text(religion);
     $("#confirm_landline").text(landline);
 }
+
+function getLevelName() {
+    let id = $("#level_id").val();
+    $.ajax({
+        type: "GET",
+        url: APP_URL + "/api/grade-level/get-name/" + id,
+        success: function (response) {
+            $("#confirm_level").text(response[0].name);
+        },
+    });
+}

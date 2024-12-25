@@ -19,5 +19,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/grade-level/get-name', [ApiController::class, 'getGradeLevelName']);
+Route::get('/grade-level/get-name/{id}', [ApiController::class, 'getGradeLevelName']);
 Route::get('/student/get-all', [ApiController::class, 'getAllStudents']);

@@ -1,5 +1,6 @@
 <h4 class="fw-bold mb-3">Student Profile</h4>
 <i class="text-danger">All fields with * are required.</i>
+
 <div class="row mb-3 mt-3">
     
     <div class="col-lg">
@@ -19,6 +20,7 @@
         <input type="text" class="form-control" name="suffix">
     </div>
 </div>
+
 <div class="row mb-5">
     <div class="col-lg-3">
         <label class="">Birthday <i class="text-danger">*</i></label>
@@ -41,6 +43,7 @@
         </select>
     </div>
 </div>
+
 <div class="row mb-3">
     <div class="col-lg">
         <label class="">LRN</label>
@@ -48,7 +51,7 @@
     </div>
     <div class="col-lg-5">
         <label class="">Grade Level <i class="text-danger">*</i></label>
-        <select name="level_id" class="form-control profile-field" id="level_id" onchange="saveLevelLabel()">
+        <select name="level_id" class="form-control profile-field" id="level_id" onchange="getLevelName()">
             <option value="" selected hidden disabled></option>
                 @foreach ($levels as $level)
                     <option value="{{ $level->id }}">{{ $level->name }}</option>
@@ -56,6 +59,7 @@
         </select>
     </div>
 </div>
+
 <div class="row mb-5">
     <div class="col-lg">
         <label class="">Address</label>
@@ -66,21 +70,8 @@
         <input type="text" class="form-control" name="landline">
     </div>
 </div>
+
 <div class="d-flex flex-row-reverse">
     <button type="button" class="btn btn-primary fw-bold m-1" id="profile_next" onclick="changeForms('profile','confirm')" disabled>Next</button>
-    <button type="button" class="btn btn-outline-primary fw-bold m-1" onclick="changeForms('profile','confirm')">Back</button>
+    <a href="{{ route('student') }}" role="button" class="btn btn-outline-primary fw-bold m-1">Back</a>
 </div>
-
-<script>
-    function saveLevelLabel() {
-        let id = $("#level_id").val();
-        $.ajax({
-            type: "GET",
-            url: "{{ url('api/grade-level/get-name/') }}",
-            data : {'id' : id},
-            success: function (response) {
-                $("#confirm_level").text(response[0].name);
-            },
-        });
-    }
-</script>
