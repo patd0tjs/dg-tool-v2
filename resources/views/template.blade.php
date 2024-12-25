@@ -23,13 +23,19 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+        {{-- bootstrap datatables --}}
         <link href="https://cdn.datatables.net/v/bs5/jq-3.7.0/jszip-3.10.1/dt-2.1.8/b-3.2.0/b-colvis-3.2.0/b-html5-3.2.0/b-print-3.2.0/date-1.5.4/r-3.0.3/sc-2.4.3/datatables.min.css" rel="stylesheet">
  
         <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
         <script src="https://cdn.datatables.net/v/bs5/jq-3.7.0/jszip-3.10.1/dt-2.1.8/b-3.2.0/b-colvis-3.2.0/b-html5-3.2.0/b-print-3.2.0/date-1.5.4/r-3.0.3/sc-2.4.3/datatables.min.js"></script>
-    
+        
+        {{-- initialize app url constant --}}
+        <script>
+          const APP_URL = "{{ url('') }}";
+        </script>
     </head>
+
     <body>
         <nav class="navbar d-none d-sm-block" id="nav_stripe">
             <div class="container-fluid d-flex justify-content-center">
@@ -74,4 +80,6 @@
             @yield('content')
           </div>
     </body>
+
+    @include('components/loader')
 </html>

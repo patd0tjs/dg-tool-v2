@@ -1,4 +1,4 @@
-<h4 class="fw-bold mb-3">Confirm</h4>
+<h4 class="fw-bold mb-3">Confirmation</h4>
 <div class="row">
     <div class="col-lg-9">
         <table class="mb-4">
@@ -29,6 +29,10 @@
                 <td class="text-end" id="confirm_age"></td>
             </tr>
             <tr class="summary-detail">
+                <th>GENDER</th>
+                <td class="text-end" id="confirm_gender"></td>
+            </tr>
+            <tr class="summary-detail">
                 <th>RELIGION</th>
                 <td class="text-end" id="confirm_religion"></td>
             </tr>
@@ -38,13 +42,13 @@
             </tr>
         </table>
         <div class="row">
-            <div class="col-xl-2">
+            <div class="col-xl-2 mt-1">
                 <button type="button" class="btn btn-outline-primary fw-bold w-100" onclick="changeForms('confirm','profile')">Back</button>
             </div>
-            <div class="col-xl">
+            <div class="col-xl mt-1">
                 <button type="button" class="btn btn-outline-primary fw-bold w-100" onclick="changeForms('profile','confirm')" disabled>Add Relative Information</button>
             </div>
-            <div class="col-xl-4">
+            <div class="col-xl-4 mt-1">
                 <button type="submit" class="btn btn-primary fw-bold w-100">Confirm Student</button>
             </div>
         </div>

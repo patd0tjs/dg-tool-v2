@@ -1,9 +1,13 @@
 @extends('template')
-<link rel="stylesheet" href="{{ URL::asset('css/student.css') }}">
+
+<link rel="stylesheet" href="{{ URL::asset('css/student/add.css') }}">
+
 @section('content')
     <h2 id="page_name" class="fw-bold">Student</h2>
+    
     <div class="container-fluid">
         <div class="row">
+
             <div class="col-3 d-none d-lg-block">
                 <div class="row mt-5 mb-5">
                     <div class="col fs-4 fw-bold align-self-center" id="profile_nav_label">
@@ -71,10 +75,10 @@
                     </div>
                 </div>
             </div>
+
             <div class="col">
                 <div class="container-fluid p-4" id="add_student_profile_container">
-                    
-
+            
                     {{-- main form --}}
                     <form action="{{ route('student/add') }}" method="post">
                         @csrf
@@ -90,7 +94,9 @@
 
                 </div>
             </div>
+
         </div>
     </div>
-    <script src="{{ URL::asset('js/student.js') }}"></script>
+    
+    <script src="{{ URL::asset('js/student/add.js') }}"></script>
 @endsection

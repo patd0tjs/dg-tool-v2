@@ -1,0 +1,18 @@
+td {
+    text-align: center;
+}
+
+table.dataTable thead > tr > th.dt-orderable-asc,
+table.dataTable thead > tr > th.dt-orderable-desc,
+table.dataTable thead > tr > th.dt-ordering-asc,
+table.dataTable thead > tr > th.dt-ordering-desc,
+table.dataTable thead > tr > td.dt-orderable-asc,
+table.dataTable thead > tr > td.dt-orderable-desc,
+table.dataTable thead > tr > td.dt-ordering-asc,
+table.dataTable thead > tr > td.dt-ordering-desc {
+    padding-right: 0px !important;
+}
+
+.box-shadow {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
