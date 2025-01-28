@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\TransactionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,8 +22,11 @@ Route::get('/', function () {
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware(['auth']);
 Route::get('/student', [StudentController::class, 'index'])->name('student')->middleware(['auth']);
+Route::get('/transaction', [TransactionController::class, 'index'])->name('transaction')->middleware(['auth']);
 
 // add student
 Route::get('/student/add', [StudentController::class, 'create'])->name('student/add')->middleware(['auth']);
 Route::post('/student/add', [StudentController::class, 'store'])->name('student/add')->middleware(['auth']);
+
+
 require __DIR__.'/auth.php';

@@ -59,7 +59,7 @@
                     <a class="nav-link {{ ($page == "Student") ? 'active' : '' }}" href="{{ route('student') }}">Student</a>
                   </li>
                   <li class="nav-item text-center">
-                    <a class="nav-link" href="#">Transaction</a>
+                    <a class="nav-link {{ ($page == "Transaction") ? 'active' : '' }}" href="{{ route('transaction') }}">Transaction</a>
                   </li>
                   <li class="nav-item text-center">
                     <a class="nav-link" href="#">Fees</a>
